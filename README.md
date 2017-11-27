@@ -92,18 +92,18 @@ P.S: Tất cả các câu lệnh dưới đây đã được kiểm tra bằng `
 * [Không xem xét các thay đổi cho tệp đã theo dõi.](#dont-consider-changes-for-tracked-file)
 * [Hủy assume-unchanged.](#undo-assume-unchanged)
 * [Dọn dẹp các tệp từ `.gitignore`.](#clean-the-files-from-gitignore)
-* [Restore deleted file.](#restore-deleted-file)
-* [Restore file to a specific commit-hash](#restore-file-to-a-specific-commit-hash)
-* [Always rebase instead of merge on pull.](#always-rebase-instead-of-merge-on-pull)
-* [List all the alias and configs.](#list-all-the-alias-and-configs)
-* [Make git case sensitive.](#make-git-case-sensitive)
-* [Add custom editors.](#add-custom-editors)
-* [Auto correct typos.](#auto-correct-typos)
-* [Check if the change was a part of a release.](#check-if-the-change-was-a-part-of-a-release)
-* [Dry run. (any command that supports dry-run flag should do.)](#dry-run-any-command-that-supports-dry-run-flag-should-do)
-* [Marks your commit as a fix of a previous commit.](#marks-your-commit-as-a-fix-of-a-previous-commit)
+* [Khôi phục tệp đã bị xóa.](#restore-deleted-file)
+* [Khôi phục một file từ một `commit-hash` nhất định](#restore-file-to-a-specific-commit-hash)
+* [Luôn `rebase` thay vì tích hợp khi pull.](#always-rebase-instead-of-merge-on-pull)
+* [Danh sách tất cả các lối tắt và cấu hình.](#list-all-the-alias-and-configs)
+* [Cấu hình git phân biệt chữ hoa chữ thường](#make-git-case-sensitive)
+* [Thêm trình soạn thảo của bạn.](#add-custom-editors)
+* [Tự động sửa lỗi chính tả.](#auto-correct-typos)
+* [Kiểm tra nếu thay đổi đã là một phần của xuất bản.](#check-if-the-change-was-a-part-of-a-release)
+* [Dry run. (tất cả các câu lệnh hộ trợ `dry-run` được gắn cờ nên sử dụng.)](#dry-run-any-command-that-supports-dry-run-flag-should-do)
+* [Gán commit của bạn là 1 fix của commit trước đó.](#marks-your-commit-as-a-fix-of-a-previous-commit)
 * [Squash fixup commits normal commits.](#squash-fixup-commits-normal-commits)
-* [Skip staging area during commit.](#skip-staging-area-during-commit)
+* [Bỏ qua khu vực dàn trong quá trình commit.](#skip-staging-area-during-commit)
 * [Interactive staging.](#interactive-staging)
 * [List ignored files.](#list-ignored-files)
 * [Status of ignored files.](#status-of-ignored-files)
@@ -740,17 +740,17 @@ git update-index --no-assume-unchanged <file_name>
 git clean -X -f
 ```
 
-## Restore deleted file.
+## Khôi phục tệp đã bị xóa.
 ```sh
 git checkout <deleting_commit>^ -- <file_path>
 ```
 
-## Restore file to a specific commit-hash
+## Khôi phục một file từ một `commit-hash` nhất định
 ```sh
 git checkout <commit-ish> -- <file_path>
 ```
 
-## Always rebase instead of merge on pull.
+## Luôn `rebase` thay vì tích hợp khi pull.
 ```sh
 git config --global pull.rebase true
 ```
@@ -762,37 +762,37 @@ __Cách khác:__
 git config --global branch.autosetuprebase always
 ```
 
-## List all the alias and configs.
+## Danh sách tất cả các lối tắt và cấu hình.
 ```sh
 git config --list
 ```
 
-## Make git case sensitive.
+## Cấu hình git phân biệt chữ hoa chữ thường
 ```sh
 git config --global core.ignorecase false
 ```
 
-## Add custom editors.
+## Thêm trình soạn thảo của bạn.
 ```sh
 git config --global core.editor '$EDITOR'
 ```
 
-## Auto correct typos.
+## Tự động sửa lỗi chính tả.
 ```sh
 git config --global help.autocorrect 1
 ```
 
-## Check if the change was a part of a release.
+## Kiểm tra nếu thay đổi đã là một phần của xuất bản.
 ```sh
 git name-rev --name-only <SHA-1>
 ```
 
-## Dry run. (any command that supports dry-run flag should do.)
+## Dry run. (tất cả các câu lệnh hộ trợ `dry-run` được gắn cờ nên sử dụng.)
 ```sh
 git clean -fd --dry-run
 ```
 
-## Marks your commit as a fix of a previous commit.
+## Gán commit của bạn là 1 fix của commit trước đó.
 ```sh
 git commit --fixup <SHA-1>
 ```
@@ -802,7 +802,7 @@ git commit --fixup <SHA-1>
 git rebase -i --autosquash
 ```
 
-## Skip staging area during commit.
+## Bỏ qua khu vực dàn trong quá trình commit.
 ```sh
 git commit --only <file_path>
 ```
