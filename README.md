@@ -13,85 +13,85 @@ P.S: Tất cả các câu lệnh dưới đây đã được kiểm tra bằng `
 <!-- Don’t remove or change the comment above – that can break automatic updates. -->
 * [Sử dụng Git hiệu quả mỗi ngày với 20 câu lệnh](#everyday-git-in-twenty-commands-or-so)
 * [Hiển thị những câu lệnh hữu ích](#show-helpful-guides-that-come-with-git)
-* [Search change by content](#search-change-by-content)
-* [Sync with remote, overwrite local changes](#sync-with-remote-overwrite-local-changes)
-* [List of all files till a commit](#list-of-all-files-till-a-commit)
+* [Tìm kiếm thay đổi bằng nội dung](#search-change-by-content)
+* [Đồng bộ với remote, ghi đè tất cả những thay đổi hiện tại](#sync-with-remote-overwrite-local-changes)
+* [Danh sách tất cả các tệp trong 1 commit](#list-of-all-files-till-a-commit)
 * [Git reset first commit](#git-reset-first-commit)
-* [List all the conflicted files](#list-all-the-conflicted-files)
-* [List of all files changed in a commit](#list-of-all-files-changed-in-a-commit)
-* [Unstaged changes since last commit](#unstaged-changes-since-last-commit)
-* [Changes staged for commit](#changes-staged-for-commit)
-* [Show both staged and unstaged changes](#show-both-staged-and-unstaged-changes)
-* [List all branches that are already merged into master](#list-all-branches-that-are-already-merged-into-master)
-* [Quickly switch to the previous branch](#quickly-switch-to-the-previous-branch)
-* [Remove branches that have already been merged with master](#remove-branches-that-have-already-been-merged-with-master)
-* [List all branches and their upstreams, as well as last commit on branch](#list-all-branches-and-their-upstreams-as-well-as-last-commit-on-branch)
-* [Track upstream branch](#track-upstream-branch)
-* [Delete local branch](#delete-local-branch)
-* [Delete remote branch](#delete-remote-branch)
-* [Delete local tag](#delete-local-tag)
-* [Delete remote tag](#delete-remote-tag)
+* [Danh sách tất cả tệp đã bị conflict](#list-all-the-conflicted-files)
+* [Danh sách tất cả các file đã bị thay đổi trong 1 commit](#list-of-all-files-changed-in-a-commit)
+* [Tất cả những thay đổi chưa được ghi nhận kể từ commit cuối cùng](#unstaged-changes-since-last-commit)
+* [Những thay đổi đã được ghi nhận](#changes-staged-for-commit)
+* [Xem mọi thay đổi trên tệp kể từ commit cuối](#show-both-staged-and-unstaged-changes)
+* [Danh sách tất cả các `branch` đã được `merged` vào `master`](#list-all-branches-that-are-already-merged-into-master)
+* [Quay lại branch gần nhất](#quickly-switch-to-the-previous-branch)
+* [Xóa tất cả `branch` đã được `merged` vào `master`](#remove-branches-that-have-already-been-merged-with-master)
+* [Danh sách tất cả branch và thông tin cơ bản: upstream, commit gần nhất](#list-all-branches-and-their-upstreams-as-well-as-last-commit-on-branch)
+* [Thông tin về upstream của branch](#track-upstream-branch)
+* [Xóa một branch trên máy](#delete-local-branch)
+* [Xóa một remote branch](#delete-remote-branch)
+* [Xóa một tag trên máy](#delete-local-tag)
+* [Xóa một remote tag](#delete-remote-tag)
 * [Undo local changes with the last content in head](#undo-local-changes-with-the-last-content-in-head)
-* [Revert: Undo a commit by creating a new commit](#revert-undo-a-commit-by-creating-a-new-commit)
-* [Reset: Discard commits, advised for private branch](#reset-discard-commits-advised-for-private-branch)
-* [Reword the previous commit message](#reword-the-previous-commit-message)
-* [See commit history for just the current branch](#see-commit-history-for-just-the-current-branch)
-* [Amend author.](#amend-author)
-* [Reset author, after author has been changed in the global config.](#reset-author-after-author-has-been-changed-in-the-global-config)
-* [Changing a remote's URL](#changing-a-remotes-url)
-* [Get list of all remote references](#get-list-of-all-remote-references)
-* [Get list of all local and remote branches](#get-list-of-all-local-and-remote-branches)
-* [Get only remote branches](#get-only-remote-branches)
-* [Stage parts of a changed file, instead of the entire file](#stage-parts-of-a-changed-file-instead-of-the-entire-file)
-* [Get git bash completion](#get-git-bash-completion)
-* [What changed since two weeks?](#what-changed-since-two-weeks)
-* [See all commits made since forking from master](#see-all-commits-made-since-forking-from-master)
-* [Pick commits across branches using cherry-pick](#pick-commits-across-branches-using-cherry-pick)
-* [Find out branches containing commit-hash](#find-out-branches-containing-commit-hash)
-* [Git Aliases](#git-aliases)
-* [Saving current state of tracked files without commiting](#saving-current-state-of-tracked-files-without-commiting)
-* [Saving current state of unstaged changes to tracked files](#saving-current-state-of-unstaged-changes-to-tracked-files)
-* [Saving current state including untracked files](#saving-current-state-including-untracked-files)
-* [Saving current state with message](#saving-current-state-with-message)
-* [Saving current state of all files (ignored, untracked, and tracked)](#saving-current-state-of-all-files-ignored-untracked-and-tracked)
-* [Show list of all saved stashes](#show-list-of-all-saved-stashes)
-* [Apply any stash without deleting from the stashed list](#apply-any-stash-without-deleting-from-the-stashed-list)
-* [Apply last stashed state and delete it from stashed list](#apply-last-stashed-state-and-delete-it-from-stashed-list)
-* [Delete all stored stashes](#delete-all-stored-stashes)
-* [Grab a single file from a stash](#grab-a-single-file-from-a-stash)
-* [Show all tracked files](#show-all-tracked-files)
-* [Show all untracked files](#show-all-untracked-files)
-* [Show all ignored files](#show-all-ignored-files)
-* [Create new working tree from a repository (git 2.5)](#create-new-working-tree-from-a-repository-git-25)
-* [Create new working tree from HEAD state](#create-new-working-tree-from-head-state)
-* [Untrack files without deleting](#untrack-files-without-deleting)
-* [Before deleting untracked files/directory, do a dry run to get the list of these files/directories](#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
-* [Forcefully remove untracked files](#forcefully-remove-untracked-files)
-* [Forcefully remove untracked directory](#forcefully-remove-untracked-directory)
-* [Update all the submodules](#update-all-the-submodules)
-* [Show all commits in the current branch yet to be merged to master](#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
-* [Rename a branch](#rename-a-branch)
-* [Rebases 'feature' to 'master' and merges it in to master ](#rebases-feature-to-master-and-merges-it-in-to-master)
-* [Archive the `master` branch](#archive-the-master-branch)
-* [Modify previous commit without modifying the commit message](#modify-previous-commit-without-modifying-the-commit-message)
-* [Prunes references to remote branches that have been deleted in the remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
-* [Retrieve the commit hash of the initial revision.](#retrieve-the-commit-hash-of-the-initial-revision)
-* [Visualize the version tree.](#visualize-the-version-tree)
-* [Deploying git tracked subfolder to gh-pages](#deploying-git-tracked-subfolder-to-gh-pages)
-* [Adding a project to repo using subtree](#adding-a-project-to-repo-using-subtree)
-* [Get latest changes in your repo for a linked project using subtree](#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
-* [Export a branch with history to a file.](#export-a-branch-with-history-to-a-file)
-* [Import from a bundle](#import-from-a-bundle)
-* [Get the name of current branch.](#get-the-name-of-current-branch)
-* [Ignore one file on commit (e.g. Changelog).](#ignore-one-file-on-commit-eg-changelog)
-* [Stash changes before rebasing](#stash-changes-before-rebasing)
-* [Fetch pull request by ID to a local branch](#fetch-pull-request-by-id-to-a-local-branch)
-* [Show the most recent tag on the current branch.](#show-the-most-recent-tag-on-the-current-branch)
-* [Show inline word diff.](#show-inline-word-diff)
-* [Show changes using common diff tools.](#show-changes-using-common-diff-tools)
-* [Don’t consider changes for tracked file.](#dont-consider-changes-for-tracked-file)
-* [Undo assume-unchanged.](#undo-assume-unchanged)
-* [Clean the files from `.gitignore`.](#clean-the-files-from-gitignore)
+* [Revert: Hủy bỏ một commit bằng cách tạo thêm 1 commit](#revert-undo-a-commit-by-creating-a-new-commit)
+* [Reset: Hủy bỏ tất cả commit, khuyên dùng cho branch cá nhân](#reset-discard-commits-advised-for-private-branch)
+* [Sửa lại commit message gần vừa tạo](#reword-the-previous-commit-message)
+* [Xem lịch sử commit riêng branch hiện tại](#see-commit-history-for-just-the-current-branch)
+* [Người thay đổi.](#amend-author)
+* [Reset tác giả, sau khi tác giả đã bị thay đổi trong cấu hình toàn hệ thống.](#reset-author-after-author-has-been-changed-in-the-global-config)
+* [Thay đổi đường dẫn remote](#changing-a-remotes-url)
+* [Lấy danh sách của tất các remote](#get-list-of-all-remote-references)
+* [Lấy danh sách branch trên local và remote](#get-list-of-all-local-and-remote-branches)
+* [Chỉ lấy danh sách branch trên remote](#get-only-remote-branches)
+* [Lưu thay đổi 1 phần của tệp, thay vì toàn bộ tệp](#stage-parts-of-a-changed-file-instead-of-the-entire-file)
+* [Lấy câu lệnh git tự động hoàn thành](#get-git-bash-completion)
+* [Những gì đã thay đổi trong 2 tuần gần nhất?](#what-changed-since-two-weeks)
+* [Xem tất cả những commit đã được tạo từ khi fork từ master](#see-all-commits-made-since-forking-from-master)
+* [Chọn các commit từ nhiều branch sử dụng `cherry-pick`](#pick-commits-across-branches-using-cherry-pick)
+* [Tìm cách branch có chứa `commit-hash`](#find-out-branches-containing-commit-hash)
+* [Gõ tắt Git](#git-aliases)
+* [Lưu trạng thái hiện tại của các tệp mà không commit](#saving-current-state-of-tracked-files-without-commiting)
+* [Lưu trạng thái hiện tại của những thay đổi chưa được lưu vào những tệp đã được theo dõi](#saving-current-state-of-unstaged-changes-to-tracked-files)
+* [Lưu trạng thái hiện tại bao gồm cả tệp chưa được theo dõi](#saving-current-state-including-untracked-files)
+* [Lưu trạng thái hiện tại với message](#saving-current-state-with-message)
+* [Lưu trạng thái hiện tại của tất cả file (bị bỏ qua, chưa được theo dõi, và được theo dõi)](#saving-current-state-of-all-files-ignored-untracked-and-tracked)
+* [Xem danh sách tất cả các lưu tạm](#show-list-of-all-saved-stashes)
+* [Áp dụng lưu tạm bất kỳ mà không xóa nó hỏi danh sách lưu tạm](#apply-any-stash-without-deleting-from-the-stashed-list)
+* [Áp dụng lưu tạm cuối cùng và xóa nó khỏi danh sách lưu tạm](#apply-last-stashed-state-and-delete-it-from-stashed-list)
+* [Xóa tất cả lưu tạm](#delete-all-stored-stashes)
+* [Lấy 1 file từ 1 lưu tạm](#grab-a-single-file-from-a-stash)
+* [Hiển thị danh sách tệp được theo dõi](#show-all-tracked-files)
+* [Hiển thị danh sách tệp chưa được theo dõi](#show-all-untracked-files)
+* [Hiển thị danh sách tệp bị bỏ qua](#show-all-ignored-files)
+* [Tạo nhánh làm việc mới từ một repo (git 2.5)](#create-new-working-tree-from-a-repository-git-25)
+* [Tạo một nhánh làm việc mới từ trạng thái HEAD](#create-new-working-tree-from-head-state)
+* [Hủy bỏ theo dõi tệp mà không xóa nó](#untrack-files-without-deleting)
+* [Trước khi xóa những tệp/ thư mục chưa được theo dõi, thực thi việc lấy danh sách các tệp/ thư mục này](#before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories)
+* [Force: Xóa bỏ tất cả tệp chưa được theo dõi](#forcefully-remove-untracked-files)
+* [Force: Xóa bỏ tất cả thư mục chưa được theo dõi](#forcefully-remove-untracked-directory)
+* [Cập nhật tất cả submodule](#update-all-the-submodules)
+* [Hiển thị tất cả các commit chưa được `merged` vào `master` của `branch` hiện tại](#show-all-commits-in-the-current-branch-yet-to-be-merged-to-master)
+* [Đổi tên một branch](#rename-a-branch)
+* [Rebases 'feature' thành 'master' và merges nó vào master](#rebases-feature-to-master-and-merges-it-in-to-master)
+* [Khóa branch `master`](#archive-the-master-branch)
+* [Thay đổi commit gần nhất mà không thay đổi commit message](#modify-previous-commit-without-modifying-the-commit-message)
+* [Truy vấn đến cho các nhánh remote mà nó đã bị xóa trong remote.](#prunes-references-to-remote-branches-that-have-been-deleted-in-the-remote)
+* [Truy xuất `commit-hash` của bản sửa đổi ban đầu.](#retrieve-the-commit-hash-of-the-initial-revision)
+* [Xem cây commit theo dạng đồ họa](#visualize-the-version-tree)
+* [Deploy một thư mục đã được theo dõi vào `gh-pages`](#deploying-git-tracked-subfolder-to-gh-pages)
+* [Thêm một dự án vào repo sử dụng subtree](#adding-a-project-to-repo-using-subtree)
+* [Lấy thay đổi mới nhất trong repo của bạn cho một dự án đã được liên kết dùng subtree](#get-latest-changes-in-your-repo-for-a-linked-project-using-subtree)
+* [Xuất một branch với lịch sử ra một tệp](#export-a-branch-with-history-to-a-file)
+* [Nhập từ một bundle](#import-from-a-bundle)
+* [Lấy tên của branch hiện tại](#get-the-name-of-current-branch)
+* [Bỏ qua 1 file trong commit (e.g. Changelog).](#ignore-one-file-on-commit-eg-changelog)
+* [Lưu tạm các thay đổi trước khi `rebase`](#stash-changes-before-rebasing)
+* [Cập nhật yêu cầu tích hợp bằng ID vào local branch](#fetch-pull-request-by-id-to-a-local-branch)
+* [Hiển thị tag gần nhất trên branch hiện tại.](#show-the-most-recent-tag-on-the-current-branch)
+* [Hiển thị thay đổi tổng quát.](#show-inline-word-diff)
+* [Hiển thị thay đổi sử dụng các công cụ.](#show-changes-using-common-diff-tools)
+* [Không xem xét các thay đổi cho tệp đã theo dõi.](#dont-consider-changes-for-tracked-file)
+* [Hủy assume-unchanged.](#undo-assume-unchanged)
+* [Dọn dẹp các tệp từ `.gitignore`.](#clean-the-files-from-gitignore)
 * [Restore deleted file.](#restore-deleted-file)
 * [Restore file to a specific commit-hash](#restore-file-to-a-specific-commit-hash)
 * [Always rebase instead of merge on pull.](#always-rebase-instead-of-merge-on-pull)
@@ -182,17 +182,17 @@ git help everyday
 git help -g
 ```
 
-## Search change by content
+## Tìm kiếm thay đổi bằng nội dung
 ```sh
 git log -S'<a term in the source>'
 ```
 
-## Sync with remote, overwrite local changes
+## Đồng bộ với remote, ghi đè tất cả những thay đổi hiện tại
 ```sh
 git fetch origin && git reset --hard origin/master && git clean -f -d
 ```
 
-## List of all files till a commit
+## Danh sách tất cả các tệp trong 1 commit
 ```sh
 git ls-tree --name-only -r <commit-ish>
 ```
@@ -202,96 +202,96 @@ git ls-tree --name-only -r <commit-ish>
 git update-ref -d HEAD
 ```
 
-## List all the conflicted files
+## Danh sách tất cả tệp đã bị conflict
 ```sh
 git diff --name-only --diff-filter=U
 ```
 
-## List of all files changed in a commit
+## Danh sách tất cả các file đã bị thay đổi trong 1 commit
 ```sh
 git diff-tree --no-commit-id --name-only -r <commit-ish>
 ```
 
-## Unstaged changes since last commit
+## Tất cả những thay đổi chưa được ghi nhận kể từ commit cuối cùng
 ```sh
 git diff
 ```
 
-## Changes staged for commit
+## Những thay đổi đã được ghi nhận
 ```sh
 git diff --cached
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git diff --staged
 ```
 
-## Show both staged and unstaged changes
+## Xem mọi thay đổi trên tệp kể từ commit cuối
 ```sh
 git diff HEAD
 ```
 
-## List all branches that are already merged into master
+## Danh sách tất cả các `branch` đã được `merged` vào `master`
 ```sh
 git branch --merged master
 ```
 
-## Quickly switch to the previous branch
+## Quay lại branch gần nhất
 ```sh
 git checkout -
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git checkout @{-1}
 ```
 
-## Remove branches that have already been merged with master
+## Xóa tất cả `branch` đã được `merged` vào `master`
 ```sh
 git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -d
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d # will not delete master if master is not checked out
 ```
 
-## List all branches and their upstreams, as well as last commit on branch
+## Danh sách tất cả branch và thông tin cơ bản: upstream, commit gần nhất
 ```sh
 git branch -vv
 ```
 
-## Track upstream branch
+## Thông tin về upstream của branch
 ```sh
 git branch -u origin/mybranch
 ```
 
-## Delete local branch
+## Xóa một branch trên máy
 ```sh
 git branch -d <local_branchname>
 ```
 
-## Delete remote branch
+## Xóa một remote branch
 ```sh
 git push origin --delete <remote_branchname>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git push origin :<remote_branchname>
 ```
 
-## Delete local tag
+## Xóa một tag trên máy
 ```sh
 git tag -d <tag-name>
 ```
 
-## Delete remote tag
+## Xóa một remote tag
 ```sh
 git push origin :refs/tags/<tag-name>
 ```
@@ -301,128 +301,128 @@ git push origin :refs/tags/<tag-name>
 git checkout -- <file_name>
 ```
 
-## Revert: Undo a commit by creating a new commit
+## Revert: Hủy bỏ một commit bằng cách tạo thêm 1 commit
 ```sh
 git revert <commit-ish>
 ```
 
-## Reset: Discard commits, advised for private branch
+## Reset: Hủy bỏ tất cả commit, khuyên dùng cho branch cá nhân
 ```sh
 git reset <commit-ish>
 ```
 
-## Reword the previous commit message
+## Sửa lại commit message gần vừa tạo
 ```sh
 git commit -v --amend
 ```
 
-## See commit history for just the current branch
+## Xem lịch sử commit riêng branch hiện tại
 ```sh
 git cherry -v master
 ```
 
-## Amend author.
+## Người thay đổi.
 ```sh
 git commit --amend --author='Author Name <email@address.com>'
 ```
 
-## Reset author, after author has been changed in the global config.
+## Reset tác giả, sau khi tác giả đã bị thay đổi trong cấu hình toàn hệ thống.
 ```sh
 git commit --amend --reset-author --no-edit
 ```
 
-## Changing a remote's URL
+## Thay đổi đường dẫn remote
 ```sh
 git remote set-url origin <URL>
 ```
 
-## Get list of all remote references
+## Lấy danh sách của tất các remote
 ```sh
 git remote
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git remote show
 ```
 
-## Get list of all local and remote branches
+## Lấy danh sách branch trên local và remote
 ```sh
 git branch -a
 ```
 
-## Get only remote branches
+## Chỉ lấy danh sách branch trên remote
 ```sh
 git branch -r
 ```
 
-## Stage parts of a changed file, instead of the entire file
+## Lưu thay đổi 1 phần của tệp, thay vì toàn bộ tệp
 ```sh
 git add -p
 ```
 
-## Get git bash completion
+## Lấy câu lệnh git tự động hoàn thành
 ```sh
 curl http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
 ```
 
-## What changed since two weeks?
+## Những gì đã thay đổi trong 2 tuần gần nhất?
 ```sh
 git log --no-merges --raw --since='2 weeks ago'
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git whatchanged --since='2 weeks ago'
 ```
 
-## See all commits made since forking from master
+## Xem tất cả những commit đã được tạo từ khi fork từ master
 ```sh
 git log --no-merges --stat --reverse master..
 ```
 
-## Pick commits across branches using cherry-pick
+## Chọn các commit từ nhiều branch sử dụng `cherry-pick`
 ```sh
 git checkout <branch-name> && git cherry-pick <commit-ish>
 ```
 
-## Find out branches containing commit-hash
+## Tìm cách branch có chứa `commit-hash`
 ```sh
 git branch -a --contains <commit-ish>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git branch --contains <commit-ish>
 ```
 
-## Git Aliases
+## Gõ tắt Git
 ```sh
 git config --global alias.<handle> <command> 
 git config --global alias.st status
 ```
 
-## Saving current state of tracked files without commiting
+## Lưu trạng thái hiện tại của các tệp mà không commit
 ```sh
 git stash
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash save
 ```
 
-## Saving current state of unstaged changes to tracked files
+## Lưu trạng thái hiện tại của những thay đổi chưa được lưu vào những tệp đã được theo dõi
 ```sh
 git stash -k
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash --keep-index
 ```
@@ -432,13 +432,13 @@ git stash --keep-index
 git stash save --keep-index
 ```
 
-## Saving current state including untracked files
+## Lưu trạng thái hiện tại bao gồm cả tệp chưa được theo dõi
 ```sh
 git stash -u
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash save -u
 ```
@@ -448,18 +448,18 @@ git stash save -u
 git stash save --include-untracked
 ```
 
-## Saving current state with message
+## Lưu trạng thái hiện tại với message
 ```sh
 git stash save <message>
 ```
 
-## Saving current state of all files (ignored, untracked, and tracked)
+## Lưu trạng thái hiện tại của tất cả file (bị bỏ qua, chưa được theo dõi, và được theo dõi)
 ```sh
 git stash -a
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash --all
 ```
@@ -469,107 +469,107 @@ git stash --all
 git stash save --all
 ```
 
-## Show list of all saved stashes
+## Xem danh sách tất cả các lưu tạm
 ```sh
 git stash list
 ```
 
-## Apply any stash without deleting from the stashed list
+## Áp dụng lưu tạm bất kỳ mà không xóa nó hỏi danh sách lưu tạm
 ```sh
 git stash apply <stash@{n}>
 ```
 
-## Apply last stashed state and delete it from stashed list
+## Áp dụng lưu tạm cuối cùng và xóa nó khỏi danh sách lưu tạm
 ```sh
 git stash pop
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash apply stash@{0} && git stash drop stash@{0}
 ```
 
-## Delete all stored stashes
+## Xóa tất cả lưu tạm
 ```sh
 git stash clear
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git stash drop <stash@{n}>
 ```
 
-## Grab a single file from a stash
+## Lấy 1 file từ 1 lưu tạm
 ```sh
 git checkout <stash@{n}> -- <file_path>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git checkout stash@{0} -- <file_path>
 ```
 
-## Show all tracked files
+## Hiển thị danh sách tệp được theo dõi
 ```sh
 git ls-files -t
 ```
 
-## Show all untracked files
+## Hiển thị danh sách tệp chưa được theo dõi
 ```sh
 git ls-files --others
 ```
 
-## Show all ignored files
+## Hiển thị danh sách tệp bị bỏ qua
 ```sh
 git ls-files --others -i --exclude-standard
 ```
 
-## Create new working tree from a repository (git 2.5)
+## Tạo nhánh làm việc mới từ một repo (git 2.5)
 ```sh
 git worktree add -b <branch-name> <path> <start-point>
 ```
 
-## Create new working tree from HEAD state
+## Tạo một nhánh làm việc mới từ trạng thái HEAD
 ```sh
 git worktree add --detach <path> HEAD
 ```
 
-## Untrack files without deleting
+## Hủy bỏ theo dõi tệp mà không xóa nó
 ```sh
 git rm --cached <file_path>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git rm --cached -r <directory_path>
 ```
 
-## Before deleting untracked files/directory, do a dry run to get the list of these files/directories
+## Trước khi xóa những tệp/ thư mục chưa được theo dõi, thực thi việc lấy danh sách các tệp/ thư mục này
 ```sh
 git clean -n
 ```
 
-## Forcefully remove untracked files
+## Force: Xóa bỏ tất cả tệp chưa được theo dõi
 ```sh
 git clean -f
 ```
 
-## Forcefully remove untracked directory
+## Force: Xóa bỏ tất cả thư mục chưa được theo dõi
 ```sh
 git clean -f -d
 ```
 
-## Update all the submodules
+## Cập nhật tất cả submodule
 ```sh
 git submodule foreach git pull
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git submodule update --init --recursive
 ```
@@ -579,61 +579,61 @@ git submodule update --init --recursive
 git submodule update --remote
 ```
 
-## Show all commits in the current branch yet to be merged to master
+## Hiển thị tất cả các commit chưa được `merged` vào `master` của `branch` hiện tại
 ```sh
 git cherry -v master
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git cherry -v master <branch-to-be-merged>
 ```
 
-## Rename a branch
+## Đổi tên một branch
 ```sh
 git branch -m <new-branch-name>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git branch -m [<old-branch-name>] <new-branch-name>
 ```
 
-## Rebases 'feature' to 'master' and merges it in to master 
+## Rebases 'feature' thành 'master' và merges nó vào master
 ```sh
 git rebase master feature && git checkout master && git merge -
 ```
 
-## Archive the `master` branch
+## Khóa branch `master`
 ```sh
 git archive master --format=zip --output=master.zip
 ```
 
-## Modify previous commit without modifying the commit message
+## Thay đổi commit gần nhất mà không thay đổi commit message
 ```sh
 git add --all && git commit --amend --no-edit
 ```
 
-## Prunes references to remote branches that have been deleted in the remote.
+## Truy vấn đến cho các nhánh remote mà nó đã bị xóa trong remote.
 ```sh
 git fetch -p
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git remote prune origin
 ```
 
-## Retrieve the commit hash of the initial revision.
+## Truy xuất `commit-hash` của bản sửa đổi ban đầu.
 ```sh
  git rev-list --reverse HEAD | head -1
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git rev-list --max-parents=0 HEAD
 ```
@@ -648,94 +648,94 @@ git log --pretty=oneline | tail -1 | cut -c 1-40
 git log --pretty=oneline --reverse | head -1 | cut -c 1-40
 ```
 
-## Visualize the version tree.
+## Xem cây commit theo dạng đồ họa
 ```sh
 git log --pretty=oneline --graph --decorate --all
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 gitk --all
 ```
 
-## Deploying git tracked subfolder to gh-pages
+## Deploy một thư mục đã được theo dõi vào `gh-pages`
 ```sh
 git subtree push --prefix subfolder_name origin gh-pages
 ```
 
-## Adding a project to repo using subtree
+## Thêm một dự án vào repo sử dụng subtree
 ```sh
 git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
 ```
 
-## Get latest changes in your repo for a linked project using subtree
+## Lấy thay đổi mới nhất trong repo của bạn cho một dự án đã được liên kết dùng subtree
 ```sh
 git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master
 ```
 
-## Export a branch with history to a file.
+## Xuất một branch với lịch sử ra một tệp
 ```sh
 git bundle create <file> <branch-name>
 ```
 
-## Import from a bundle
+## Nhập từ một bundle
 ```sh
 git clone repo.bundle <repo-dir> -b <branch-name>
 ```
 
-## Get the name of current branch.
+## Lấy tên của branch hiện tại
 ```sh
 git rev-parse --abbrev-ref HEAD
 ```
 
-## Ignore one file on commit (e.g. Changelog).
+## Bỏ qua 1 file trong commit (e.g. Changelog).
 ```sh
 git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog
 ```
 
-## Stash changes before rebasing
+## Lưu tạm các thay đổi trước khi `rebase`
 ```sh
 git rebase --autostash
 ```
 
-## Fetch pull request by ID to a local branch
+## Cập nhật yêu cầu tích hợp bằng ID vào local branch
 ```sh
 git fetch origin pull/<id>/head:<branch-name>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git pull origin pull/<id>/head:<branch-name>
 ```
 
-## Show the most recent tag on the current branch.
+## Hiển thị tag gần nhất trên branch hiện tại.
 ```sh
 git describe --tags --abbrev=0
 ```
 
-## Show inline word diff.
+## Hiển thị thay đổi tổng quát.
 ```sh
 git diff --word-diff
 ```
 
-## Show changes using common diff tools.
+## Hiển thị thay đổi sử dụng các công cụ.
 ```sh
 git difftool -t <commit1> <commit2> <path>
 ```
 
-## Don’t consider changes for tracked file.
+## Không xem xét các thay đổi cho tệp đã theo dõi.
 ```sh
 git update-index --assume-unchanged <file_name>
 ```
 
-## Undo assume-unchanged.
+## Hủy assume-unchanged.
 ```sh
 git update-index --no-assume-unchanged <file_name>
 ```
 
-## Clean the files from `.gitignore`.
+## Dọn dẹp các tệp từ `.gitignore`.
 ```sh
 git clean -X -f
 ```
@@ -756,7 +756,7 @@ git config --global pull.rebase true
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 #git < 1.7.9
 git config --global branch.autosetuprebase always
@@ -833,7 +833,7 @@ git log -<n>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git log -n <n>
 ```
@@ -930,7 +930,7 @@ git checkout -b <branch-name>
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git branch <branch-name> && git checkout <branch-name>
 ```
@@ -1012,7 +1012,7 @@ git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add +=
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s, removed lines: %s, total lines: %s
 ", add, subs, loc }' - # on Mac OSX
@@ -1064,7 +1064,7 @@ git log --branches --not --remotes
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git log @{u}..
 ```
@@ -1136,7 +1136,7 @@ git config -l | grep alias | sed 's/^alias\.//g'
 ```
 
 
-__Alternatives:__
+__Cách khác:__
 ```sh
 git config -l | grep alias | cut -d '.' -f 2
 ```
