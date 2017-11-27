@@ -105,66 +105,66 @@ P.S: Tất cả các câu lệnh dưới đây đã được kiểm tra bằng `
 * [Squash fixup commits normal commits.](#squash-fixup-commits-normal-commits)
 * [Bỏ qua khu vực dàn trong quá trình commit.](#skip-staging-area-during-commit)
 * [Interactive staging.](#interactive-staging)
-* [List ignored files.](#list-ignored-files)
-* [Status of ignored files.](#status-of-ignored-files)
-* [Commits in Branch1 that are not in Branch2](#commits-in-branch1-that-are-not-in-branch2)
-* [List n last commits](#list-n-last-commits)
+* [Danh sách tệp bị bỏ qua.](#list-ignored-files)
+* [Trạng thái của tệp bị bỏ qua.](#status-of-ignored-files)
+* [Các commit ở Branch1 mà không có ở Branch2](#commits-in-branch1-that-are-not-in-branch2)
+* [Danh sách n commit gần nhất](#list-n-last-commits)
 * [Reuse recorded resolution, record and reuse previous conflicts resolutions.](#reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions)
-* [Open all conflicted files in an editor.](#open-all-conflicted-files-in-an-editor)
-* [Count unpacked number of objects and their disk consumption.](#count-unpacked-number-of-objects-and-their-disk-consumption)
-* [Prune all unreachable objects from the object database.](#prune-all-unreachable-objects-from-the-object-database)
-* [Instantly browse your working repository in gitweb.](#instantly-browse-your-working-repository-in-gitweb)
+* [Mở tất cả những tệp bị conflict bằng trình soạn thảo.](#open-all-conflicted-files-in-an-editor)
+* [Đếm số đối tượng và dung lượng ổ đĩa của file đã giải nén](#count-unpacked-number-of-objects-and-their-disk-consumption)
+* [Xoá tất cả các đối tượng không thể truy cập từ cơ sở dữ liệu đối tượng.](#prune-all-unreachable-objects-from-the-object-database)
+* [Chuyển đến repo của bạn trên gitweb bằng trình duyệt.](#instantly-browse-your-working-repository-in-gitweb)
 * [View the GPG signatures in the commit log](#view-the-gpg-signatures-in-the-commit-log)
-* [Remove entry in the global config.](#remove-entry-in-the-global-config)
-* [Checkout a new branch without any history](#checkout-a-new-branch-without-any-history)
-* [Extract file from another branch.](#extract-file-from-another-branch)
-* [List only the root and merge commits.](#list-only-the-root-and-merge-commits)
-* [Change previous two commits with an interactive rebase.](#change-previous-two-commits-with-an-interactive-rebase)
-* [List all branch is WIP](#list-all-branch-is-wip)
-* [Find guilty with binary search](#find-guilty-with-binary-search)
-* [Bypass pre-commit and commit-msg githooks](#bypass-pre-commit-and-commit-msg-githooks)
-* [List commits and changes to a specific file (even through renaming)](#list-commits-and-changes-to-a-specific-file-even-through-renaming)
-* [Clone a single branch](#clone-a-single-branch)
-* [Create and switch new branch](#create-and-switch-new-branch)
-* [Ignore file mode changes on commits](#ignore-file-mode-changes-on-commits)
-* [Turn off git colored terminal output](#turn-off-git-colored-terminal-output)
-* [Specific color settings](#specific-color-settings)
-* [Show all local branches ordered by recent commits](#show-all-local-branches-ordered-by-recent-commits)
-* [Find lines matching the pattern (regex or string) in tracked files](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
-* [Clone a shallow copy of a repository](#clone-a-shallow-copy-of-a-repository)
-* [Search Commit log across all branches for given text](#search-commit-log-across-all-branches-for-given-text)
-* [Get first commit in a branch (from master)](#get-first-commit-in-a-branch-from-master)
-* [Unstaging Staged file](#unstaging-staged-file)
-* [Force push to Remote Repository](#force-push-to-remote-repository)
-* [Adding Remote name](#adding-remote-name)
-* [Show the author, time and last revision made to each line of a given file](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
-* [Group commits by authors and title](#group-commits-by-authors-and-title)
-* [Forced push but still ensure you don't overwrite other's work](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
-* [Show how many lines does an author contribute](#show-how-many-lines-does-an-author-contribute)
-* [Revert: Reverting an entire merge](#revert-reverting-an-entire-merge)
-* [Number of commits in a branch](#number-of-commits-in-a-branch)
-* [Alias: git undo](#alias-git-undo)
-* [Add object notes](#add-object-notes)
-* [Show all the git-notes](#show-all-the-git-notes)
-* [Apply commit from another repository](#apply-commit-from-another-repository)
-* [Specific fetch reference](#specific-fetch-reference)
-* [Find common ancestor of two branches](#find-common-ancestor-of-two-branches)
-* [List unpushed git commits](#list-unpushed-git-commits)
-* [Add everything, but whitespace changes](#add-everything-but-whitespace-changes)
-* [Edit [local/global] git config](#edit-localglobal-git-config)
-* [blame on certain range](#blame-on-certain-range)
-* [Show a Git logical variable.](#show-a-git-logical-variable)
-* [Preformatted patch file.](#preformatted-patch-file)
-* [Get the repo name.](#get-the-repo-name)
-* [logs between date range](#logs-between-date-range)
-* [Exclude author from logs](#exclude-author-from-logs)
-* [Generates a summary of pending changes](#generates-a-summary-of-pending-changes)
-* [List references in a remote repository](#list-references-in-a-remote-repository)
-* [Backup untracked files.](#backup-untracked-files)
-* [List all git aliases](#list-all-git-aliases)
-* [Show git status short](#show-git-status-short)
-* [Checkout a commit prior to a day ago](#checkout-a-commit-prior-to-a-day-ago)
-* [Push a new local branch to remote repository and track](#push-a-new-local-branch-to-remote-repository-and-track)
+* [Xóa bỏ mục trong cấu hình toàn hệ thống.](#remove-entry-in-the-global-config)
+* [Khởi tạo một branch mới không có lịch sử](#checkout-a-new-branch-without-any-history)
+* [Xem tệp của branch khác.](#extract-file-from-another-branch)
+* [Chỉ liệt kê commit gốc và đã merge.](#list-only-the-root-and-merge-commits)
+* [Thay đổi 2 commit với một interactive rebase.](#change-previous-two-commits-with-an-interactive-rebase)
+* [Danh sách tất cả branch là WIP](#list-all-branch-is-wip)
+* [Tìm lỗi với tìm kiếm nhị phân](#find-guilty-with-binary-search)
+* [Bỏ qua `pre-commit` và `commit-msg` khi commit](#bypass-pre-commit-and-commit-msg-githooks)
+* [Danh sách các commit và thay đổi cho 1 file nhất định (kể cả file đã đổi tên)](#list-commits-and-changes-to-a-specific-file-even-through-renaming)
+* [Clone 1 branch duy nhất](#clone-a-single-branch)
+* [Tạo và chuyển qua branch mới ngay lập tức](#create-and-switch-new-branch)
+* [Bỏ qua kiểu thay đổi tệp trên các commit](#ignore-file-mode-changes-on-commits)
+* [Tắt giao diện màu trong terminal](#turn-off-git-colored-terminal-output)
+* [Chỉ định cấu hình màu theo branch, diff..](#specific-color-settings)
+* [Hiển thị tất cả các branch đã xếp đặt trong các commit gần đây](#show-all-local-branches-ordered-by-recent-commits)
+* [Tìm các dòng thỏa điều kiện (regex hoặc chuỗi) trong những tệp được theo dõi](#find-lines-matching-the-pattern-regex-or-string-in-tracked-files)
+* [Clone một sao chép bóng của repo](#clone-a-shallow-copy-of-a-repository)
+* [Tìm kiếm lịch sử commit trên toàn bộ branch bằng một từ khóa cho trước](#search-commit-log-across-all-branches-for-given-text)
+* [Lấy commit đầu tiên trong một branch (từ `master`)](#get-first-commit-in-a-branch-from-master)
+* [Hủy lưu thay đổi tệp](#unstaging-staged-file)
+* [Đẩy lên remote repo và bỏ qua mọi vật cản](#force-push-to-remote-repository)
+* [Thêm tên Remote](#adding-remote-name)
+* [Hiển thị tác giả, thời gian và bản ghi gần nhất lên từng dòng của 1 file cho trước](#show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file)
+* [Nhóm các commit theo các tác giả và tiêu đề](#group-commits-by-authors-and-title)
+* [Forced push nhưng vẫn đảm bảo bạn không ghi đè lên những thay đổi của người khác](#forced-push-but-still-ensure-you-dont-overwrite-others-work)
+* [Hiển số dòng đóng góp của một tác giả](#show-how-many-lines-does-an-author-contribute)
+* [Revert: Hoàn nguyên toàn bộ một `merge`](#revert-reverting-an-entire-merge)
+* [Số lượng commit trong 1 branch](#number-of-commits-in-a-branch)
+* [Gõ tắt: git undo](#alias-git-undo)
+* [Thêm các ghi chú](#add-object-notes)
+* [Hiển thị tất cả `git-notes`](#show-all-the-git-notes)
+* [Áp dụng commit từ một repo khác](#apply-commit-from-another-repository)
+* [Fetch từ một ref nhất định](#specific-fetch-reference)
+* [Tìm gốc chung của 2 nhánh](#find-common-ancestor-of-two-branches)
+* [Danh sách commit chưa push](#list-unpushed-git-commits)
+* [Thêm mọi thứ, nhưng bỏ qua thay đổi khoảng trắng](#add-everything-but-whitespace-changes)
+* [Chỉnh [local/global] git config](#edit-localglobal-git-config)
+* [Xem `blame` trong một khoảng nhất định](#blame-on-certain-range)
+* [Xem một biến Git logical](#show-a-git-logical-variable)
+* [Tệp vá lỗi được định dạng sẵn.](#preformatted-patch-file)
+* [Lấy tên repo.](#get-the-repo-name)
+* [Xem logs trong một khoảng ngày tháng](#logs-between-date-range)
+* [Xem logs ngoại trừ tác giả](#exclude-author-from-logs)
+* [Tạo ra một bản tóm tắt các thay đổi đang chờ](#generates-a-summary-of-pending-changes)
+* [Danh sách các ref trong remote repository](#list-references-in-a-remote-repository)
+* [Sao lưu những file không được theo dõi.](#backup-untracked-files)
+* [Danh sách các lệnh gõ tắt](#list-all-git-aliases)
+* [Hiển thị trạng thái git ở dạng rút gọn](#show-git-status-short)
+* [Quay về một commit tại 1 thời điểm nhất định trong quá khứ](#checkout-a-commit-prior-to-a-day-ago)
+* [Đẩy một branch từ local lên remote và theo dõi](#push-a-new-local-branch-to-remote-repository-and-track)
 
 <!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
 <!-- @doxie.inject end toc -->
@@ -812,22 +812,22 @@ git commit --only <file_path>
 git add -i
 ```
 
-## List ignored files.
+## Danh sách tệp bị bỏ qua.
 ```sh
 git check-ignore *
 ```
 
-## Status of ignored files.
+## Trạng thái của tệp bị bỏ qua.
 ```sh
 git status --ignored
 ```
 
-## Commits in Branch1 that are not in Branch2
+## Các commit ở Branch1 mà không có ở Branch2
 ```sh
 git log Branch1 ^Branch2
 ```
 
-## List n last commits
+## Danh sách n commit gần nhất
 ```sh
 git log -<n>
 ```
@@ -843,22 +843,22 @@ git log -n <n>
 git config --global rerere.enabled 1
 ```
 
-## Open all conflicted files in an editor.
+## Mở tất cả những tệp bị conflict bằng trình soạn thảo.
 ```sh
 git diff --name-only | uniq | xargs $EDITOR
 ```
 
-## Count unpacked number of objects and their disk consumption.
+## Đếm số đối tượng và dung lượng ổ đĩa của file đã giải nén
 ```sh
 git count-objects --human-readable
 ```
 
-## Prune all unreachable objects from the object database.
+## Xoá tất cả các đối tượng không thể truy cập từ cơ sở dữ liệu đối tượng.
 ```sh
 git gc --prune=now --aggressive
 ```
 
-## Instantly browse your working repository in gitweb.
+## Chuyển đến repo của bạn trên gitweb bằng trình duyệt.
 ```sh
 git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]
 ```
@@ -868,37 +868,37 @@ git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]
 git log --show-signature
 ```
 
-## Remove entry in the global config.
+## Xóa bỏ mục trong cấu hình toàn hệ thống.
 ```sh
 git config --global --unset <entry-name>
 ```
 
-## Checkout a new branch without any history
+## Khởi tạo một branch mới không có lịch sử
 ```sh
 git checkout --orphan <branch_name>
 ```
 
-## Extract file from another branch.
+## Xem tệp của branch khác.
 ```sh
 git show <branch_name>:<file_name>
 ```
 
-## List only the root and merge commits.
+## Chỉ liệt kê commit gốc và đã merge.
 ```sh
 git log --first-parent
 ```
 
-## Change previous two commits with an interactive rebase.
+## Thay đổi 2 commit với một interactive rebase.
 ```sh
 git rebase --interactive HEAD~2
 ```
 
-## List all branch is WIP
+## Danh sách tất cả branch là WIP
 ```sh
 git checkout master && git branch --no-merged
 ```
 
-## Find guilty with binary search
+## Tìm lỗi với tìm kiếm nhị phân
 ```sh
 git bisect start                    # Search start 
 git bisect bad                      # Set point to bad commit 
@@ -909,22 +909,22 @@ git bisect reset                    # Finish search
 
 ```
 
-## Bypass pre-commit and commit-msg githooks
+## Bỏ qua `pre-commit` và `commit-msg` khi commit
 ```sh
 git commit --no-verify
 ```
 
-## List commits and changes to a specific file (even through renaming)
+## Danh sách các commit và thay đổi cho 1 file nhất định (kể cả file đã đổi tên)
 ```sh
 git log --follow -p -- <file_path>
 ```
 
-## Clone a single branch
+## Clone 1 branch duy nhất
 ```sh
 git clone -b <branch-name> --single-branch https://github.com/user/repo.git
 ```
 
-## Create and switch new branch
+## Tạo và chuyển qua branch mới ngay lập tức
 ```sh
 git checkout -b <branch-name>
 ```
@@ -935,77 +935,77 @@ __Cách khác:__
 git branch <branch-name> && git checkout <branch-name>
 ```
 
-## Ignore file mode changes on commits
+## Bỏ qua kiểu thay đổi tệp trên các commit
 ```sh
 git config core.fileMode false
 ```
 
-## Turn off git colored terminal output
+## Tắt giao diện màu trong terminal
 ```sh
 git config --global color.ui false
 ```
 
-## Specific color settings
+## Chỉ định cấu hình màu theo branch, diff..
 ```sh
 git config --global <specific command e.g branch, diff> <true, false or always>
 ```
 
-## Show all local branches ordered by recent commits
+## Hiển thị tất cả các branch đã xếp đặt trong các commit gần đây
 ```sh
 git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
 ```
 
-## Find lines matching the pattern (regex or string) in tracked files
+## Tìm các dòng thỏa điều kiện (regex hoặc chuỗi) trong những tệp được theo dõi
 ```sh
 git grep --heading --line-number 'foo bar'
 ```
 
-## Clone a shallow copy of a repository
+## Clone một sao chép bóng của repo
 ```sh
 git clone https://github.com/user/repo.git --depth 1
 ```
 
-## Search Commit log across all branches for given text
+## Tìm kiếm lịch sử commit trên toàn bộ branch bằng một từ khóa cho trước
 ```sh
 git log --all --grep='<given-text>'
 ```
 
-## Get first commit in a branch (from master)
+## Lấy commit đầu tiên trong một branch (từ `master`)
 ```sh
 git log master..<branch-name> --oneline | tail -1
 ```
 
-## Unstaging Staged file
+## Hủy lưu thay đổi tệp
 ```sh
 git reset HEAD <file-name>
 ```
 
-## Force push to Remote Repository
+## Đẩy lên remote repo và bỏ qua mọi vật cản
 ```sh
 git push -f <remote-name> <branch-name>
 ```
 
-## Adding Remote name
+## Thêm tên Remote
 ```sh
 git remote add <remote-nickname> <remote-url>
 ```
 
-## Show the author, time and last revision made to each line of a given file
+## Hiển thị tác giả, thời gian và bản ghi gần nhất lên từng dòng của 1 file cho trước
 ```sh
 git blame <file-name>
 ```
 
-## Group commits by authors and title
+## Nhóm các commit theo các tác giả và tiêu đề
 ```sh
 git shortlog
 ```
 
-## Forced push but still ensure you don't overwrite other's work
+## Forced push nhưng vẫn đảm bảo bạn không ghi đè lên những thay đổi của người khác
 ```sh
 git push --force-with-lease <remote-name> <branch-name>
 ```
 
-## Show how many lines does an author contribute
+## Hiển số dòng đóng góp của một tác giả
 ```sh
 git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | gawk '{ add += <!-- @doxie.inject start -->; subs += <!-- @doxie.inject end -->; loc += <!-- @doxie.inject start --> - <!-- @doxie.inject end --> } END { printf "added lines: %s removed lines: %s total lines: %s
 ", add, subs, loc }' -
@@ -1018,47 +1018,47 @@ git log --author='_Your_Name_Here_' --pretty=tformat: --numstat | awk '{ add += 
 ", add, subs, loc }' - # on Mac OSX
 ```
 
-## Revert: Reverting an entire merge
+## Revert: Hoàn nguyên toàn bộ một `merge`
 ```sh
 git revert -m 1 <commit-ish>
 ```
 
-## Number of commits in a branch
+## Số lượng commit trong 1 branch
 ```sh
 git rev-list --count <branch-name>
 ```
 
-## Alias: git undo
+## Gõ tắt: git undo
 ```sh
 git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
 ```
 
-## Add object notes
+## Thêm các ghi chú
 ```sh
 git notes add -m 'Note on the previous commit....'
 ```
 
-## Show all the git-notes
+## Hiển thị tất cả `git-notes`
 ```sh
 git log --show-notes='*'
 ```
 
-## Apply commit from another repository
+## Áp dụng commit từ một repo khác
 ```sh
 git --git-dir=<source-dir>/.git format-patch -k -1 --stdout <SHA1> | git am -3 -k
 ```
 
-## Specific fetch reference
+## Fetch từ một ref nhất định
 ```sh
 git fetch origin master:refs/remotes/origin/mymaster
 ```
 
-## Find common ancestor of two branches
+## Tìm gốc chung của 2 nhánh
 ```sh
 diff -u <(git rev-list --first-parent BranchA) <(git rev-list --first-parent BranchB) | sed -ne 's/^ //p' | head -1
 ```
 
-## List unpushed git commits
+## Danh sách commit chưa push
 ```sh
 git log --branches --not --remotes
 ```
@@ -1074,63 +1074,63 @@ git log @{u}..
 git cherry -v
 ```
 
-## Add everything, but whitespace changes
+## Thêm mọi thứ, nhưng bỏ qua thay đổi khoảng trắng
 ```sh
 git diff --ignore-all-space | git apply --cached
 ```
 
-## Edit [local/global] git config
+## Chỉnh [local/global] git config
 ```sh
 git config [--global] --edit
 ```
 
-## blame on certain range
+## Xem `blame` trong một khoảng nhất định
 ```sh
 git blame -L <start>,<end>
 ```
 
-## Show a Git logical variable.
+## Xem một biến Git logical
 ```sh
 git var -l | <variable>
 ```
 
-## Preformatted patch file.
+## Tệp vá lỗi được định dạng sẵn.
 ```sh
 git format-patch -M upstream..topic
 ```
 
-## Get the repo name.
+## Lấy tên repo.
 ```sh
 git rev-parse --show-toplevel
 ```
 
-## logs between date range
+## Xem logs trong một khoảng ngày tháng
 ```sh
 git log --since='FEB 1 2017' --until='FEB 14 2017'
 ```
 
-## Exclude author from logs
+## Xem logs ngoại trừ tác giả
 ```sh
 git log --perl-regexp --author='^((?!excluded-author-regex).*)
 
 ```
 
-## Generates a summary of pending changes
+## Tạo ra một bản tóm tắt các thay đổi đang chờ
 ```sh
 git request-pull v1.0 https://git.ko.xz/project master:for-linus
 ```
 
-## List references in a remote repository
+## Danh sách các ref trong remote repository
 ```sh
 git ls-remote git://git.kernel.org/pub/scm/git/git.git
 ```
 
-## Backup untracked files.
+## Sao lưu những file không được theo dõi.
 ```sh
 git ls-files --others -i --exclude-standard | xargs zip untracked.zip
 ```
 
-## List all git aliases
+## Danh sách các lệnh gõ tắt
 ```sh
 git config -l | grep alias | sed 's/^alias\.//g'
 ```
@@ -1141,17 +1141,17 @@ __Cách khác:__
 git config -l | grep alias | cut -d '.' -f 2
 ```
 
-## Show git status short
+## Hiển thị trạng thái git ở dạng rút gọn
 ```sh
 git status --short --branch
 ```
 
-## Checkout a commit prior to a day ago
+## Quay về một commit tại 1 thời điểm nhất định trong quá khứ
 ```sh
 git checkout master@{yesterday}
 ```
 
-## Push a new local branch to remote repository and track
+## Đẩy một branch từ local lên remote và theo dõi
 ```sh
 git push -u origin <branch_name>
 ```
